@@ -4,6 +4,7 @@
   "repository": "https://github.com/LandonSchropp/landon-schropp-theme",
   "author": "Landon Schropp <schroppl@gmail.com>",
   "license": "UNLICENSED",
+  "version": "0.0.0",
   "scripts": {
     "build": "NODE_NO_WARNINGS=1 gatsby build",
     "clean": "gatsby clean",
