@@ -7,14 +7,16 @@
   &__header
     margin: 0
 
-  &__suphead, &__title
+  &__super-text, &__title
     display: block
 
-  &__suphead, &__subhead
-    margin: $spacing * 0.25 0
+  &__super-text, &__sub-text
+    display: block
+    margin: $spacing * 0.25 auto
+    max-width: 50ch
 
-    // Even though the suphead is part of the header, it should still be displayed the same as the
-    // subhead.
+    // Even though the super text is part of the header, it should still be displayed the same as
+    // the sub-text.
     font-size: $font-size--medium
     font-weight: normal
     font-family: $font-family--serif
@@ -24,10 +26,11 @@
     color: var(--theme-light-text-color)
 
   // HACK: The extra spacing is needed to visually make the header look evenly spaced.
-  &__subhead
-    margin: $spacing * 0.5 0
+  &__sub-text
+    margin-top: $spacing * 0.5
+    margin-bottom: $spacing * 0.5
 
-  &__title-link
+  a.header__title-link
     text-decoration: none
 
     &:hover
@@ -35,19 +38,5 @@
       text-decoration-line: underline
       text-decoration-thickness: 0.075em
 
-  &__tags
-    display: flex
-    justify-content: center
-    flex-wrap: wrap
-
-  // TODO: The tag groups exist to allow the tags to wrap in a grouped fashion. This prevents one
-  // "lone tag" from sitting on the next line on standard mobile sizes. This should probably be
-  // fixed via CSS.
-  &__tag-group
-    display: flex
-
-    *
-      margin: $spacing * 0.5 $spacing * 0.25 0
-
-  &__link:hover
+  a
     text-decoration: underline
