@@ -1,0 +1,13 @@
+.layout
+
+  // FIX: For some reason, Google Chrome does not display the bottom margins of the page without
+  // this style.
+  overflow: auto
+
+  &:not(.layout--full-screen)
+    max-width: 70ch
+    margin: 0 auto
+    padding: 0 $spacing * 0.5
+
+    @include viewport--medium
+      padding: 0 $spacing

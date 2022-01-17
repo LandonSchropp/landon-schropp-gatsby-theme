@@ -3,7 +3,7 @@ import PropTypes from "prop-types";
 import React from "react";
 import Highlight from "react-highlight";
 
-export function HighlightedPre({ children }) {
+export function HighlightedPreHack({ children }) {
 
   // HACK: This bridges the MDX renderer component to Highlight.js. As a result, we have to traverse
   // the child components to get language.
@@ -17,7 +17,7 @@ export function HighlightedPre({ children }) {
   return <Highlight language={ language }>{ children }</Highlight>;
 }
 
-HighlightedPre.propTypes = {
+HighlightedPreHack.propTypes = {
   className: PropTypes.string,
   children: PropTypes.node.isRequired
 };
