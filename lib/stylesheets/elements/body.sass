@@ -9,7 +9,6 @@ body
   // to the body in Layout, *and* other data attributes being applied elsewhere. Rather than fight
   // that limitation, this uses the body classes appended by use-dark-mode.
   &.dark-mode
-    --theme-accent-color: #{ $light-text-color--dark-theme }
     --theme-background-color: #{ $background-color--dark-theme }
     --theme-background-highlight-color: #{ $background-highlight-color--dark-theme }
     --theme-header-color: #{ $header-color--dark-theme }
@@ -19,7 +18,6 @@ body
 
   // HACK: Ditto to the above hack.
   &.light-mode
-    --theme-accent-color: #{ $light-text-color--light-theme }
     --theme-background-color: #{ $background-color--light-theme }
     --theme-background-highlight-color: #{ $background-highlight-color--light-theme }
     --theme-header-color: #{ $header-color--light-theme }
