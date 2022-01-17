@@ -1,7 +1,7 @@
 {
-  "name": "landonschropp.com",
-  "description": "My personal website",
-  "repository": "https://github.com/LandonSchropp/landonschropp.com",
+  "name": "landon-schropp-theme",
+  "description": "This is the theme that powers my personal webiste.",
+  "repository": "https://github.com/LandonSchropp/landon-schropp-theme",
   "author": "Landon Schropp <schroppl@gmail.com>",
   "license": "UNLICENSED",
   "scripts": {
