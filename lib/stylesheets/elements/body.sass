@@ -1,34 +1,30 @@
 body
-  --theme-color: #{ $cornflower-blue }
-  +tag-color(--theme-color)
-
-  &[data-theme="dark"]
-    --theme-background-color: #{ $black-out }
-    --theme-highlight-background-color: #{ $mine-shaft }
-    --theme-header-color: #{ $white }
-    --theme-text-color: #{ $bleach }
-    --theme-light-text-color: #{ $steam }
-    --theme-extra-light-text-color: #{ $great-falls }
-
-    background-color: var(--theme-background-color)
-    color: var(--theme-text-color)
-
-  &[data-theme="light"]
-    --theme-background-color: #{ $white }
-    --theme-highlight-background-color: #{ $bleach }
-    --theme-header-color: #{ $black-out }
-    --theme-text-color: #{ $mine-shaft }
-    --theme-light-text-color: #{ $emperor }
-    --theme-extra-light-text-color: #{ $gray }
-
-    background-color: var(--theme-background-color)
-    color: var(--theme-text-color)
-
   height: 100%
 
   // HACK: This is a quick hack to prevent margins from collapsing outside of the body.
   display: flex
   flex-direction: column
 
-  *
+  &[data-theme="dark"]
+    --theme-accent-color: #{ $light-text-color--dark-theme }
+    --theme-background-color: #{ $background-color--dark-theme }
+    --theme-highlight-background-color: #{ $highlight-background-color--dark-theme }
+    --theme-header-color: #{ $header-color--dark-theme }
+    --theme-text-color: #{ $text-color--dark-theme }
+    --theme-light-text-color: #{ $light-text-color--dark-theme }
+    --theme-extra-light-text-color: #{ $extra-light-text-color--dark-theme }
+
+  &[data-theme="light"]
+    --theme-accent-color: #{ $light-text-color--light-theme }
+    --theme-background-color: #{ $background-color--light-theme }
+    --theme-highlight-background-color: #{ $highlight-background-color--light-theme }
+    --theme-header-color: #{ $header-color--light-theme }
+    --theme-text-color: #{ $text-color--light-theme }
+    --theme-light-text-color: #{ $light-text-color--light-theme }
+    --theme-extra-light-text-color: #{ $extra-light-text-color--light-theme }
+
+  background-color: var(--theme-background-color)
+  color: var(--theme-text-color)
+
+  & > *
     flex: 0 0 auto

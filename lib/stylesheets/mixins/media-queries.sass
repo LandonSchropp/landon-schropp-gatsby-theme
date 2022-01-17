@@ -1,13 +1,13 @@
-@mixin portrait
-  @media screen and (max-aspect-ratio: 1/1)
-    @content
-
 @mixin viewport--medium
-  @media only screen and (min-width: $viewport-width--medium)
+  @media only screen and (min-width: #{ $viewport-width--medium })
     @content
 
 @mixin viewport--large
-  @media only screen and (min-width: $viewport-width--large)
+  @media only screen and (min-width: #{ $viewport-width--large })
+    @content
+
+@mixin viewport--xlarge
+  @media only screen and (min-width: #{ $viewport-width--xlarge })
     @content
 
 @mixin viewport--max-medium
@@ -16,6 +16,14 @@
 
 @mixin viewport--max-large
   @media only screen and (max-width: #{ $viewport-width--large - 1px })
+    @content
+
+@mixin viewport--max-xlarge
+  @media only screen and (max-width: #{ $viewport-width--xlarge - 1px })
+    @content
+
+@mixin portrait
+  @media screen and (max-aspect-ratio: 1/1)
     @content
 
 @mixin print
