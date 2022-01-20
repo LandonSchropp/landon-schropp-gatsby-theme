@@ -12,7 +12,7 @@ const MDX_COMPONENTS = {
   pre: HighlightedPreHack
 };
 
-export function Layout({ children, className, title, description, navigation, fullScreen }) {
+export function Layout({ children, className, title, description, navigation }) {
   let { value: darkMode } = useDarkMode();
 
   return <>
@@ -36,17 +36,13 @@ export function Layout({ children, className, title, description, navigation, fu
       <body data-theme={ darkMode ? "dark" : "light" } />
     </Helmet>
     { navigation }
-    <main className={ classNames("layout", className, { "layout--full-screen": fullScreen }) }>
+    <main className={ classNames("layout", className, { "layout--full-screen": !navigation }) }>
       <MDXProvider components={ MDX_COMPONENTS }>
         { children }
       </MDXProvider>
     </main>
   </>;
 }
-
-Layout.defaultProps = {
-  fullScreen: false
-};
 
 Layout.propTypes = {
   children: PropTypes.node.isRequired,
