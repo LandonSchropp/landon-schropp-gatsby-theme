@@ -1,16 +1,8 @@
-import { MDXProvider } from "@mdx-js/react";
 import classNames from "classnames";
 import PropTypes from "prop-types";
 import React from "react";
 import { Helmet } from "react-helmet";
 import useDarkMode from "use-dark-mode";
-
-import { HighlightedPreHack } from "../components/highlighted-pre-hack";
-
-// Custom components used in MDX rendering.
-const MDX_COMPONENTS = {
-  pre: HighlightedPreHack
-};
 
 export function Layout({ children, className, title, description, navigation }) {
   let { value: darkMode } = useDarkMode();
@@ -37,9 +29,7 @@ export function Layout({ children, className, title, description, navigation }) 
     </Helmet>
     { navigation }
     <main className={ classNames("layout", className, { "layout--full-screen": !navigation }) }>
-      <MDXProvider components={ MDX_COMPONENTS }>
-        { children }
-      </MDXProvider>
+      { children }
     </main>
   </>;
 }
