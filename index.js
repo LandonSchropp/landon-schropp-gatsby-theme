@@ -6,3 +6,6 @@ export * from "./lib/components/listify";
 export * from "./lib/utilities/date";
 export * from "./lib/utilities/import";
 export * from "./lib/utilities/url";
+
+export * from "./lib/gatsby/on-create-notion-node";
+export * from "./lib/gatsby/data-node";
