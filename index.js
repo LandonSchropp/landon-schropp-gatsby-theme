@@ -1,3 +1,4 @@
+export * from "./lib/components/article";
 export * from "./lib/components/header";
 export * from "./lib/components/layout";
 export * from "./lib/components/listify";
