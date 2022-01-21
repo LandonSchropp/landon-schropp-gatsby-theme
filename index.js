@@ -1,3 +1,5 @@
+export * from "./lib/hooks/use-is-client";
+
 export * from "./lib/components/article";
 export * from "./lib/components/header";
 export * from "./lib/components/layout";
