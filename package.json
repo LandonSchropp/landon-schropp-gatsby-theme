@@ -4,6 +4,10 @@
   "repository": "https://github.com/LandonSchropp/landon-schropp-gatsby-theme",
   "author": "Landon Schropp <schroppl@gmail.com>",
   "license": "UNLICENSED",
+  "private": true,
+  "publishConfig": {
+    "@LandonSchropp:registry": "https://npm.pkg.github.com"
+  },
   "version": "0.0.0",
   "scripts": {
     "build": "NODE_NO_WARNINGS=1 gatsby build",
