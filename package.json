@@ -10,13 +10,7 @@
   },
   "version": "0.0.0",
   "scripts": {
-    "build": "NODE_NO_WARNINGS=1 gatsby build",
-    "clean": "gatsby clean",
-    "deploy": "NODE_NO_WARNINGS=1 gatsby build && gh-pages -d public",
-    "develop": "NODE_NO_WARNINGS=1 gatsby develop",
-    "download-content": "babel-node contentful/download-content.js",
     "lint": "eslint --max-warnings=0 .",
-    "serve": "NODE_NO_WARNINGS=1 gatsby serve",
     "test": "jest"
   },
   "dependencies": {
